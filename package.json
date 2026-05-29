@@ -1,6 +1,6 @@
 {
   "name": "@allstak/astro",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official AllStak SDK for Astro — error tracking, structured logs, distributed tracing, and observability for Astro applications (SSR and static).",
   "keywords": [
     "astro",

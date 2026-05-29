@@ -5,6 +5,21 @@ All notable changes to `@allstak/astro` are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] — 2026-05-30
+
+Maintenance release. Refines the auto-instrumentation glue and rebuilds the
+published artifacts. No public API changes — `@allstak/astro` remains a
+drop-in Astro integration.
+
+### Changed
+
+- Rebuilt the distributed bundles so the embedded SDK version, type
+  declarations, and source maps reflect this release.
+- Hardened the client and SSR auto-instrumentation paths so observability
+  bootstrap never interferes with page navigation or request rendering.
+
+[0.1.1]: https://github.com/AllStak/allstak-astro/releases/tag/v0.1.1
+
 ## [0.1.0] — 2026-05-29
 
 Initial release of the official AllStak SDK for Astro, shipped as an Astro
