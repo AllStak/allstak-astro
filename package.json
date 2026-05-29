@@ -1,0 +1,88 @@
+{
+  "name": "@allstak/astro",
+  "version": "0.1.0",
+  "description": "Official AllStak SDK for Astro — error tracking, structured logs, distributed tracing, and observability for Astro applications (SSR and static).",
+  "keywords": [
+    "astro",
+    "astro-integration",
+    "observability",
+    "error-tracking",
+    "logging",
+    "monitoring",
+    "tracing",
+    "allstak"
+  ],
+  "homepage": "https://allstak.sa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllStak/allstak-astro.git"
+  },
+  "bugs": "https://github.com/AllStak/allstak-astro/issues",
+  "license": "MIT",
+  "author": "AllStak <sdk@allstak.sa>",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./middleware": {
+      "import": {
+        "types": "./dist/middleware.d.ts",
+        "default": "./dist/middleware.js"
+      },
+      "require": {
+        "types": "./dist/middleware.d.cts",
+        "default": "./dist/middleware.cjs"
+      }
+    },
+    "./client": {
+      "import": {
+        "types": "./dist/client.d.ts",
+        "default": "./dist/client.js"
+      },
+      "require": {
+        "types": "./dist/client.d.cts",
+        "default": "./dist/client.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "astro": "^3.5.0 || ^4.0.0 || ^5.0.0 || ^6.0.0"
+  },
+  "dependencies": {
+    "@allstak/js": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "astro": "^6.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.1.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://registry.npmjs.org/"
+  }
+}
