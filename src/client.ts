@@ -11,6 +11,8 @@ import { AllStak } from '@allstak/js';
 import type { AllStakConfig } from '@allstak/js';
 import { init } from './init';
 
+export { init } from './init';
+
 declare global {
   interface Window {
     /** Guards against double-init if the snippet is somehow injected twice. */
